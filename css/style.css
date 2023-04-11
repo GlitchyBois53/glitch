@@ -110,7 +110,7 @@ h1 {
     box-shadow: none;
   }
 
-  #switch:checked ~ .container {
+  #switch:checked ~ .main-container {
     background: #040404;
     cursor: pointer;
   }
@@ -124,7 +124,7 @@ h1 {
     --turn-btn:var(--green)
   }
 
-  .container {
+  .main-container {
     --container-size: 80vh;
     width: var(--container-size);
     height: calc(var(--container-size) * 0.75);
@@ -138,13 +138,13 @@ h1 {
 
   @media screen and (max-width: 620px) {
 
-    .container {
+    .main-container {
         --container-size: 90vw
     }
     
   }
 
-  .container::after {
+  .main-container::after {
     content: " ";
     display: block;
     position: absolute;
@@ -157,7 +157,8 @@ h1 {
     z-index: 2;
     pointer-events: none;
   }
-  .container::before {
+
+  .main-container::before {
     content: " ";
     display: block;
     position: absolute;
@@ -238,7 +239,7 @@ h1 {
     transform: translateY(2rem);
   }
 
-  #switch:checked ~ .container::after {
+  #switch:checked ~ .main-container::after {
     animation: flicker 0.15s infinite;
   }
   
@@ -248,17 +249,17 @@ h1 {
     border: none;
   }
   
-  #switch ~ .container > .screen {
+  #switch ~ .main-container > .screen {
     animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
     animation-fill-mode: forwards;
   }
   
-  #switch:checked ~ .container > .screen {
+  #switch:checked ~ .main-container > .screen {
     animation: turn-on 4s linear;
     animation-fill-mode: forwards;
   }
 
-  #switch:checked ~ .container-fp > .screen {
+  #switch:checked ~ .main-container-fp > .screen {
     animation-delay: 0.4s;
   }
   
@@ -272,7 +273,7 @@ h1 {
     pointer-events: none;
   }
   
-  #switch:checked ~ .container .overlay {
+  #switch:checked ~ .main-container .overlay {
     animation: overlay-anim 5s linear;
     animation-fill-mode: forwards;
   }
@@ -299,7 +300,7 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: fade-in 5s forwards ease;
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.1);
   }
 
   .glitch-box {
@@ -309,4 +310,101 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Synthwave grid - https://codepen.io/halvves/pen/rPxYeb */
+
+  .perspective {
+    perspective: 100vmax;
+  }
+  
+  .synthwave {
+    --grid-color: #ff1ead;
+    --grid-weight: 1px;
+    --grid-spacing: 5vmax;
+    --grid-glow: 10px;
+    --grid-glow-color: rgba(255, 30, 173, 0.3); 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    font-size: 30vmin;
+    overflow: hidden;
+    transform: rotate3d(1, 0, 0, 75deg) translate3d(0, 60%, 0);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px var(--grid-color), 0 0 35px var(--grid-color), 0 0 40px var(--grid-color), 0 0 50px var(--grid-color), 0 0 75px var(--grid-color);
+  }
+  
+  .synthwave::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    background-position:
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+    background-size:
+      var(--grid-spacing) var(--grid-spacing),
+      var(--grid-spacing) var(--grid-spacing),
+      var(--grid-spacing) var(--grid-spacing),
+      var(--grid-spacing) var(--grid-spacing);
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        var(--grid-color),
+        var(--grid-color) var(--grid-weight),
+        transparent var(--grid-weight),
+        transparent var(--grid-spacing)
+      ),
+      repeating-linear-gradient(
+        0deg,
+        var(--grid-glow-color),
+        var(--grid-glow-color) var(--grid-weight),
+        transparent calc(var(--grid-weight) + var(--grid-glow)),
+        transparent calc(var(--grid-spacing) - var(--grid-glow)),
+      var(--grid-glow-color) var(--grid-spacing)
+      ),
+      repeating-linear-gradient(
+        -90deg,
+        var(--grid-color),
+        var(--grid-color) var(--grid-weight),
+        transparent var(--grid-weight),
+        transparent var(--grid-spacing)
+      ),
+      repeating-linear-gradient(
+        -90deg,
+        var(--grid-glow-color),
+        var(--grid-glow-color) var(--grid-weight),
+        transparent calc(var(--grid-weight) + var(--grid-glow)),
+        transparent calc(var(--grid-spacing) - var(--grid-glow)),
+      var(--grid-glow-color) var(--grid-spacing)
+      );
+    animation: 8s linear infinite wave;
+  }
+  
+  .synthwave::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:
+      linear-gradient(210deg, #000, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0)),
+      linear-gradient(150deg, #000, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0));
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translate(0, -50%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
