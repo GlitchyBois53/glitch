@@ -1,0 +1,314 @@
+:root {
+    --red: #F21BB9;
+    --blue: #5EF2D7;
+    --green: #1BF23F;
+    --turn-btn: #121212;
+}
+
+@font-face {
+    font-family: 'CrooglaCustom';
+    src: url(../fonts/Croogla4F.ttf);
+}
+
+@font-face {
+    font-family: 'CrooglaMain';
+    src: url(../fonts/Croogla4F-Main.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CrooglaMain';
+}
+
+body {
+    background-color: black;
+}
+
+.overflow-fix {
+    overflow: hidden;
+}
+
+.glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    color: white;
+    font-size: 156px;
+    letter-spacing: 1rem;
+    font-family: 'CrooglaCustom';
+}
+
+.glitch {
+    animation: glitch 3s steps(100) infinite;
+    -webkit-animation: glitch 3s steps(100) infinite;
+    cursor: none;
+}
+  
+  #switch {
+    display: none;
+  }
+  
+  #index-body {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .label-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-light {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: #D90001;
+    box-shadow: 0px 0px 12px #D90001;
+  }
+
+  .btn-light-active {
+    background-color: var(--green);
+    box-shadow: 0px 0px 12px var(--green);
+  }
+
+  .switch-label {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 1.5px 1.5px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .switch-label-active {
+    box-shadow: inset 1.5px 1.5px 12px rgba(0, 0, 0, 0.7);
+  }
+
+  .turn-btn {
+    width: 50%;
+  }
+  
+  .switch-label:active {
+    box-shadow: none;
+  }
+
+  #switch:checked ~ .container {
+    background: #040404;
+    cursor: pointer;
+  }
+
+  #switch:checked ~ .container-scaler {
+    background: #040404;
+    cursor: auto;
+  }
+
+  .turn-btn-active {
+    --turn-btn:var(--green)
+  }
+
+  .container {
+    --container-size: 80vh;
+    width: var(--container-size);
+    height: calc(var(--container-size) * 0.75);
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-inline: auto;
+    position: relative;
+    transform-origin: center center;
+  }
+
+  @media screen and (max-width: 620px) {
+
+    .container {
+        --container-size: 90vw
+    }
+    
+  }
+
+  .container::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .container::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  .container-scaler {
+    position: absolute;
+    max-width: none;
+    max-height: none;
+    height: 100vh;
+    width: 100vw;
+    transform-origin: center center;
+    margin-top: 0px;
+  }
+
+  .container-zoomer {
+    animation: scaler 0.75s ease-in;
+  }
+
+  .crt {
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    transform: scale(1.05);
+  }
+
+  .crt-fp {
+    animation: crt-scaler 2s ease-out forwards;
+    animation-delay: 3s;
+  }
+
+  .crt-fullscreen {
+    height: 100vh;
+    width: 100vw;
+    transform: scaleX(1.05) scaleY(1.02);
+  }
+
+  .crt img {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .fisheye {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    transform-origin: center center;
+    transform: scale(1.5);
+  }
+  
+  .fisheye > div {
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: scale 0.2s ease-out;
+  }
+
+  .fisheye > div p {
+    color: var(--green);
+    text-align: center;
+    transform: translateY(2rem);
+  }
+
+  #switch:checked ~ .container::after {
+    animation: flicker 0.15s infinite;
+  }
+  
+  .screen {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  #switch ~ .container > .screen {
+    animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+    animation-fill-mode: forwards;
+  }
+  
+  #switch:checked ~ .container > .screen {
+    animation: turn-on 4s linear;
+    animation-fill-mode: forwards;
+  }
+
+  #switch:checked ~ .container-fp > .screen {
+    animation-delay: 0.4s;
+  }
+  
+  .overlay {
+    color: var(--green);
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 60px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  #switch:checked ~ .container .overlay {
+    animation: overlay-anim 5s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .crt-view {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+  }
+
+  .crt-view img {
+    height: 100vh;
+    width: 100vw;
+    transform: scaleX(1.05) scaleY(1.02);
+  }
+
+  /* CRT TEXT */
+  
+  .content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 5s forwards ease;
+    background-color: #121212;
+  }
+
+  .glitch-box {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    animation: box-glitch 3s steps(100) infinite;
+    -webkit-animation: box-glitch 3s steps(100) infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
