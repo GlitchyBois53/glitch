@@ -304,8 +304,6 @@ h1 {
 
   .glitch-box {
     background-color: white;
-    width: 200px;
-    height: 100px;
     animation: box-glitch 3s steps(100) infinite;
     -webkit-animation: box-glitch 3s steps(100) infinite;
     display: flex;
