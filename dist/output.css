@@ -558,6 +558,18 @@ video {
   flex-direction: column;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
 .tracking-normal {
   letter-spacing: 0em;
 }
