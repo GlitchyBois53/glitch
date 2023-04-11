@@ -313,7 +313,7 @@ h1 {
 
   /* Synthwave grid */
 
-  body {
+  /* body {
     display: flex;
     height: 100vh;
     align-items: center;
@@ -322,15 +322,16 @@ h1 {
     overflow: hidden;
     font-family: cursive;
     perspective: 100vmax;
-  }
+  } */
   
-  .🔳 {
+  .synthwave {
     --grid-color: #ff1ead;
     --grid-weight: 1px;
     --grid-spacing: 5vmax;
     --grid-glow: 10px;
     --grid-glow-color: rgba(255, 30, 173, 0.3); 
-    position: relative;
+    position: absolute;
+    inset: 0;
     height: 100vmax;
     width: 100vmax;
     display: flex;
@@ -343,7 +344,7 @@ h1 {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px var(--grid-color), 0 0 35px var(--grid-color), 0 0 40px var(--grid-color), 0 0 50px var(--grid-color), 0 0 75px var(--grid-color);
   }
   
-  .🔳::before {
+  .synthwave::before {
     content: '';
     z-index: -1;
     position: absolute;
@@ -395,7 +396,7 @@ h1 {
     animation: 8s linear infinite 🔲;
   }
   
-  .🔳::after {
+  .synthwave::after {
     content: '';
     position: absolute;
     top: 0;
