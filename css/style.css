@@ -304,7 +304,6 @@ h1 {
   }
 
   .glitch-box {
-    background-color: white;
     animation: box-glitch 3s steps(100) infinite;
     -webkit-animation: box-glitch 3s steps(100) infinite;
     display: flex;
@@ -319,11 +318,11 @@ h1 {
   }
   
   .synthwave {
-    --grid-color: #ff1ead;
+    --grid-color: var(--red);
     --grid-weight: 1px;
     --grid-spacing: 5vmax;
     --grid-glow: 10px;
-    --grid-glow-color: rgba(255, 30, 173, 0.3); 
+    --grid-glow-color: rgba(221, 2, 140, 0.3); 
     position: absolute;
     bottom: 0;
     left: 0;
@@ -407,4 +406,13 @@ h1 {
     100% {
       transform: translate(0, 0);
     }
+  }
+
+  .glass-morph {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
