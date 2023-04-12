@@ -1,7 +1,7 @@
 var btn = document.getElementById("btn")
 var checkbox = document.getElementById("switch")
 var body = document.getElementById("index-body")
-var container = document.querySelector(".container")
+var container = document.querySelector(".main-container")
 var crt = document.querySelector(".crt")
 
 function reload() {

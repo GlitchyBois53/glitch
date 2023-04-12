@@ -11,7 +11,7 @@
 </head>
 <body>
     <input type="checkbox" id="switch" checked>
-    <div class="main-container container-scaler container-fp" id="container">
+    <div class="main-container container-scaler container-fp pointer-events-none" id="container">
         <div class="crt crt-fp">
             <img src="assets/crt-frame.png" alt="">
         </div>
@@ -19,8 +19,12 @@
             <div class="fisheye">
                 <div class="crt-container synth">
                     <div class="content-wrapper">
-                        <div class="glitch-box w-320 flex flex-col items-center justify-center">
-                            <h1 class="text-teal-500 p-4 tracking-normal">SKRIV TEKST HER</h1>
+                        <div class="glitch-box w-[370px] h-[195px] bg-white flex flex-col items-center justify-center text-[22px] gap-[42px] pointer-events-auto">
+                           <div>vil du se introduktion?</div>
+                           <div class="flex gap-4">
+                                <div class="relative border-black border w-[120px] h-[44px] z-10 bg-white flex items-center justify-center text-[22px] font-bold before:absolute before:bg-black before:w-[120px] before:h-[44px] before:mt-3 before:ml-3 before:z-0 glitch-box-hover before:pointer-events-none text-red-600"><a href="">fortsæt</a></div>
+                                <div class="relative border-black border w-[120px] h-[44px] z-10 bg-white flex items-center justify-center text-[22px] font-bold before:absolute before:bg-black before:w-[120px] before:h-[44px] before:mt-3 before:ml-3 before:z-0 glitch-box-hover before:pointer-events-none text-red-600"><a href="dashboard.html">skip</a></div>
+                           </div>
                         </div>
                     </div>
                 </div>
