@@ -51,7 +51,7 @@ btn.addEventListener ('click', () => {
                 
                 setTimeout(function () {
                     window.location.href = "frontpage.html"
-                }, 1500);
+                }, 3500);
             }
         }
 
