@@ -11,7 +11,7 @@ function reload() {
 btn.addEventListener ('click', () => {
     var click = new Audio('../audio/click.mp3');
     var noise1 = new Audio('../audio/noise-1.mp3');
-    var noise2 = new Audio('../audio/noise-2-loop.mp3');
+    var noise2 = new Audio('../audio/noise-2-loop-new.mp3');
     var off = new Audio('../audio/off.mp3');
     var fxintro = new Audio('../audio/fx-intro.mp3');
 
@@ -30,7 +30,7 @@ btn.addEventListener ('click', () => {
                 noise2.play();
                 noise2.loop = true;
             }
-        }, 1400);
+        }, 1370);
         
         btn.addEventListener ('click', () => {
             click.pause();
