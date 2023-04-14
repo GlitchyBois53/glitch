@@ -13,6 +13,8 @@ btn.addEventListener ('click', () => {
     var noise1 = new Audio('../audio/noise-1.mp3');
     var noise2 = new Audio('../audio/noise-2-loop.mp3');
     var off = new Audio('../audio/off.mp3');
+    var fxintro = new Audio('../audio/fx-intro.mp3');
+
 
     if (btn.classList.contains("active") ) {
         btn.classList.remove("active")
@@ -45,10 +47,11 @@ btn.addEventListener ('click', () => {
                 container.classList.add("container-zoomer")
                 body.classList.add("overflow-fix")
                 crt.classList.add("crt-fullscreen")
+                fxintro.play()
                 
                 setTimeout(function () {
                     window.location.href = "frontpage.html"
-                }, 500);
+                }, 1500);
             }
         }
 
