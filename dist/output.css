@@ -648,8 +648,33 @@ video {
   font-size: 22px;
 }
 
+.text-\[38px\] {
+  font-size: 38px;
+}
+
+.text-\[48px\] {
+  font-size: 48px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .before\:pointer-events-none::before {
