@@ -71,3 +71,4 @@ btn.addEventListener('click', () => {
     btn.classList.toggle("switch-label-active")
     btnLight.classList.toggle("btn-light-active")
 })
+

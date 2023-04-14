@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link href="/dist/output.css" rel="stylesheet">
+    <script src="js/frontpage.js" defer></script>
 </head>
 <body>
     <input type="checkbox" id="switch" checked>
@@ -16,13 +17,14 @@
             <img src="assets/crt-frame.png" alt="">
         </div>
         <div class="glass screen">
+            <video id="intro" class="absolute inset-0 w-screen h-screen object-cover hidden" src="video/intro.mp4"></video>
             <div class="fisheye">
                 <div class="crt-container synth">
                     <div class="content-wrapper">
-                        <div class="glitch-box w-[370px] h-[195px] bg-white flex flex-col items-center justify-center text-[22px] gap-[32px] font-bold pointer-events-auto">
-                           <div>vil du se introduktion?</div>
+                        <div id="prompt" class="glitch-box w-[370px] h-[195px] bg-white flex flex-col items-center justify-center text-[22px] gap-[32px] font-bold pointer-events-auto">
+                           <div>vil du se introduktionen?</div>
                            <div class="flex gap-4">
-                                <a href="#"><div class="relative before:border-black before:border w-[120px] h-[44px] z-10 bg-black ml-3 mt-3 before:content-['fortsæt'] before:flex before:items-center before:justify-center text-[22px] font-bold before:absolute before:bg-white before:w-[120px] before:h-[44px] before:-mt-1 before:-ml-1 before:z-0 glitch-box-hover before:pointer-events-none"></div></a>
+                                <a onclick="introPlayer()" href="#"><div class="relative before:border-black before:border w-[120px] h-[44px] z-10 bg-black ml-3 mt-3 before:content-['fortsæt'] before:flex before:items-center before:justify-center text-[22px] font-bold before:absolute before:bg-white before:w-[120px] before:h-[44px] before:-mt-1 before:-ml-1 before:z-0 glitch-box-hover before:pointer-events-none"></div></a>
                                 <a href="dashboard.html"><div class="relative before:border-black before:border w-[120px] h-[44px] z-10 bg-black ml-3 mt-3 before:content-['skip'] before:flex before:items-center before:justify-center text-[22px] font-bold before:absolute before:bg-white before:w-[120px] before:h-[44px] before:-mt-1 before:-ml-1 before:z-0 glitch-box-hover before:pointer-events-none"></div></a>
                            </div>
                         </div>

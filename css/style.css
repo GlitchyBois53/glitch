@@ -565,3 +565,21 @@ h1 {
     background: linear-gradient(rgba(94, 242, 215, 0.75), rgba(255, 255, 255, 0));;
     height: 95px;
   }
+
+  .black-box {
+    inset: 0;
+    position: absolute;
+    background-color: #000;
+    z-index: 999;
+    animation: fade-out forwards 2s ease-out;
+    pointer-events: none;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
