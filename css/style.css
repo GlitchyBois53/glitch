@@ -412,3 +412,30 @@ h1 {
       transform: translate(0, 0);
     }
   }
+
+  .comparison {
+    grid-area: compare;
+  }
+
+  .stats {
+    grid-area: stats;
+  }
+
+  .terms {
+    grid-area: terms;
+  }
+
+  .roadmap {
+    grid-area: roadmap;
+  }
+
+  .menu-item {
+    border: var(--red) 3px solid;
+    margin: 1rem;
+  }
+
+  .menu-grid {
+    grid-template-areas: 
+    'roadmap stats terms'
+    'roadmap compare compare';
+  }  
