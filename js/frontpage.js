@@ -8,6 +8,6 @@ function introPlayer() {
 
     setTimeout(function () {
         window.location.href = "dashboard.html"
-    }, 24000);
+    }, 24500);
 
 }
