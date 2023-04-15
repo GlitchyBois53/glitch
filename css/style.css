@@ -608,6 +608,10 @@ h1 {
     box-shadow: 0 0 6px 2px var(--red), inset 0 0 6px 2px var(--red)
   }
 
+  .blue-glow {
+    box-shadow: 0 0 6px 2px var(--blue), inset 0 0 6px 2px var(--blue)
+  }
+
   .l-col > div > div:nth-child(1) {
     margin-left: 4rem;
     background-color: rgba(0, 0, 0, 0.25);
@@ -628,4 +632,13 @@ h1 {
 
   .r-col > div:nth-child(odd) {
     visibility: hidden;
+  }
+
+  .player {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  #progress {
+    transition: width 33ms linear;
+    width: 0;
   }
