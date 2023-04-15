@@ -136,6 +136,11 @@ h1 {
     transform-origin: center center;
   }
 
+  .main-container-overflow {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   @media screen and (max-width: 620px) {
 
     .main-container {
@@ -303,6 +308,11 @@ h1 {
     background-color: rgba(18, 18, 18, 0.1);
   }
 
+  .no-align {
+    align-items: flex-start;
+    padding-bottom: 5rem;
+  }
+
   .glitch-box {
     animation: box-glitch 3s steps(100) infinite;
     -webkit-animation: box-glitch 3s steps(100) infinite;
@@ -328,7 +338,7 @@ h1 {
     --grid-spacing: 5vmax;
     --grid-glow: 10px;
     --grid-glow-color: rgba(2, 221, 221, 0.3); 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -343,7 +353,7 @@ h1 {
   .synthwave::before {
     content: '';
     z-index: -1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 200%;
@@ -394,7 +404,7 @@ h1 {
   
   .synthwave::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -439,6 +449,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.25);
     position: relative;
     transition: all ease 0.5s;
+    cursor: pointer;
   }
 
   .menu-text {
