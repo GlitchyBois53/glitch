@@ -610,12 +610,22 @@ h1 {
 
   .l-col > div > div:nth-child(1) {
     margin-left: 4rem;
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .r-col > div > div:nth-child(1) {
     margin-right: 4rem;
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
-  .r-col > div:nth-child(1) {
+  .r-col > div {
     flex-direction: row-reverse;
+  }
+
+  .l-col > div:nth-child(even) {
+    visibility: hidden;
+  }
+
+  .r-col > div:nth-child(odd) {
+    visibility: hidden;
   }
