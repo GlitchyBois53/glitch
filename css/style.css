@@ -453,10 +453,19 @@ h1 {
   }
 
   .menu-text {
+    font-family: 'CrooglaMain';
     text-shadow: 0px 0px 6px var(--blue);
     -webkit-text-stroke: 1px var(--blue);
     color: transparent;
+    letter-spacing: normal;
+  }
 
+  .heading-text {
+    font-family: 'CrooglaMain';
+    text-shadow: 0px 0px 6px var(--red);
+    -webkit-text-stroke: 1px var(--red);
+    color: transparent;
+    letter-spacing: normal;
   }
 
   .menu-item:hover {
@@ -593,4 +602,20 @@ h1 {
     100% {
       opacity: 0;
     }
+  }
+
+  .pink-glow {
+    box-shadow: 0 0 6px 2px var(--red), inset 0 0 6px 2px var(--red)
+  }
+
+  .l-col > div > div:nth-child(1) {
+    margin-left: 4rem;
+  }
+
+  .r-col > div > div:nth-child(1) {
+    margin-right: 4rem;
+  }
+
+  .r-col > div:nth-child(1) {
+    flex-direction: row-reverse;
   }
