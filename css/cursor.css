@@ -1,0 +1,38 @@
+* {
+    cursor: none!important;
+}
+
+body {
+    cursor: none!important;
+}
+
+:root {
+    --red: #F21BB9;
+    --blue: #5EF2D7;
+    --green: #1BF23F;
+    --turn-btn: #121212;
+}
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--red);
+    border-radius: 100%;
+    transition: all 10ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, -100%);
+    z-index: 10000;
+}
+
+.hover {
+    opacity: 0.5;
+    background-color: var(--blue);
+}
+
+.click {
+    opacity: 0.5;
+    background-color: var(--red);
+}

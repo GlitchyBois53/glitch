@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="/dist/output.css" rel="stylesheet">
     <script src="js/frontpage.js" defer></script>
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/cursor.js" defer></script>
 </head>
 <body>
+    <div class="cursor"></div>
     <input type="checkbox" id="switch" checked>
     <div class="main-container container-scaler container-fp pointer-events-none" id="container">
         <div class="crt crt-fp">
             <img src="assets/crt-frame.png" alt="">
         </div>
         <div class="glass screen">
-            <video id="intro" class="absolute inset-0 w-screen h-screen object-cover hidden" src="video/intro.mp4"></video>
+            <video id="intro" class="absolute inset-0 w-screen h-screen object-cover hidden pointer-events-auto" src="video/intro.mp4"></video>
             <div class="fisheye">
                 <div class="crt-container synth">
                     <div class="content-wrapper">
@@ -27,6 +30,7 @@
                                 <a onclick="introPlayer()" href="#"><div class="relative before:border-black before:border w-[120px] h-[44px] z-10 bg-black ml-3 mt-3 before:content-['fortsæt'] before:flex before:items-center before:justify-center text-[22px] font-bold before:absolute before:bg-white before:w-[120px] before:h-[44px] before:-mt-1 before:-ml-1 before:z-0 glitch-box-hover before:pointer-events-none"></div></a>
                                 <a href="dashboard.html"><div class="relative before:border-black before:border w-[120px] h-[44px] z-10 bg-black ml-3 mt-3 before:content-['skip'] before:flex before:items-center before:justify-center text-[22px] font-bold before:absolute before:bg-white before:w-[120px] before:h-[44px] before:-mt-1 before:-ml-1 before:z-0 glitch-box-hover before:pointer-events-none"></div></a>
                            </div>
+                           <div class="absolute w-screen h-screen pointer-events-auto"></div>
                         </div>
                     </div>
                 </div>

@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link href="/dist/output.css" rel="stylesheet" />
     <script src="js/roadmap.js" defer></script>
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/cursor.js" defer></script>
+    <script src="js/video.js" defer></script>
   </head>
   <body>
+    <div class="cursor"></div>
     <div class="black-box"></div>
     <input type="checkbox" id="switch" checked />
     <div
@@ -43,11 +47,17 @@
                 <div
                   class="relative h-screen w-[100%] flex items-center justify-center flex-col z-10"
                 >
+                <div class="text-white glitch text-center pb-8 text-[36px] tracking-widest cursor-pointer" onclick="window.location.href = 'dashboard.html'">ADHD</div>
+                <div class="relative">
                   <video
-                    class="max-w-[720px] w-[90%] h-[60%] mx-auto object-cover"
-                    controls
-                    src="video/intro.mp4"
+                  class="max-w-[720px] mx-auto object-cover"
+                  src="video/intro.mp4" id="video"
                   ></video>
+                  <div id="video-overlay" class="flex items-center justify-center inset-0 absolute invisible">
+                    <img class="w-24" id="video-play" src="assets/play.png" alt="">
+                    <img class="w-24 hidden" id="video-pause" src="assets/pause.png" alt="">
+                  </div>
+                </div>
                   <h1
                     class="heading-text text-[48px] self-start pt-16"
                   >
@@ -287,7 +297,7 @@
               </div>
               <div class="fixed w-screen h-screen top-0 left-0 z-20 pointer-events-none flex items-end justify-end">
                 <div class="player max-w-[304px] w-[70%] h-[85px] border-[#F21BB9] pink-glow pointer-events-auto mx-20 my-16 flex items-center justify-around px-[25px]">
-                  <audio id="audio" src="audio/fx-intro.mp3"></audio>
+                  <audio id="audio" src="audio/podcarsten.mp3"></audio>
                   <img src="assets/pause.png" id="pause" class="h-[46px] hidden cursor-pointer" alt="pause btn">
                   <img src="assets/play.png" id="play" class="h-[46px] cursor-pointer" alt="play btn">
                   <div class="flex flex-col items-center justify-center gap-4">

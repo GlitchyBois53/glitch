@@ -47,7 +47,7 @@ h1 {
 .glitch {
     animation: glitch 3s steps(100) infinite;
     -webkit-animation: glitch 3s steps(100) infinite;
-    cursor: none;
+    font-family: 'CrooglaCustom';
 }
   
   #switch {
@@ -534,26 +534,37 @@ h1 {
     position: absolute;
     inset: 0;
     display: flex;
-    gap: 28px;
-    display: flex;
-    justify-content: flex-end;
     margin-right: 28px;
+    gap: 28px;
+    height: 80%;
+    margin-block: auto;
+    justify-content: flex-end;
+  }
+
+  .drip-compare {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 80%;
     margin-block: auto;
   }
 
-  .drip div {
+  .drip div,
+  .drip-compare div {
     height: 100%;
     width: 2px;
     box-shadow: 0 0 6px 2px var(--blue), inset 0 0 6px 2px var(--blue);
     background-color: var(--blue);
   }
 
-  .drip div:nth-child(2) {
+  .drip div:nth-child(2),
+  .drip-compare div:nth-child(2) {
     height: 60%;
   }
 
-  .drip div:nth-child(4) {
+  .drip div:nth-child(4),
+  .drip-compare div:nth-child(4) {
     height: 80%;
   }
 
@@ -641,4 +652,28 @@ h1 {
   #progress {
     transition: width 33ms linear;
     width: 0;
+  }
+
+  .trans-bg {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .hover-box-1:hover {
+    animation: hoverbox1 ease forwards 0.5s;
+  }
+  .hover-box-2:hover {
+    animation: hoverbox2 ease forwards 0.5s;
+  }
+
+  .hover-box-3:hover {
+    animation: hoverbox3 ease forwards 0.5s;
+  }
+
+  .list-active {
+    animation: fade-in-list ease forwards 0.4s;
+    animation-delay: 0.3s;
+  }
+
+  .video-overlay-active {
+    animation: fade-in-list ease forwards 0.4s;
   }

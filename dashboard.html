@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/cursor.js" defer></script>
   </head>
   <body>
+    <div class="cursor"></div>
     <div class="black-box"></div>
     <input type="checkbox" id="switch" checked />
     <div
@@ -24,7 +27,7 @@
         <div class="fisheye">
           <div class="crt-container">
             <div
-              class="content-wrapper flex items-center justify-center pointer-events-auto"
+              class="content-wrapper flex items-center justify-center flex-col pointer-events-auto"
             >
               <div
                 class="max-w-[1000px] w-[90%] h-[540px] grid menu-grid leading-none"
@@ -62,7 +65,7 @@
                     acceptance<br /><span class="text-[38px]">of terms.</span>
                   </div>
                 </div>
-                <div class="menu-text menu-item comparison">
+                <div class="menu-text menu-item comparison" onclick="window.location.href = 'compare.html'">
                     <div class="drip">
                         <div></div>
                         <div></div>
@@ -71,6 +74,7 @@
                         <div></div>
                     </div>
                   <div class="text-[48px]">comparison.</div>
+                  
                 </div>
               </div>
             </div>

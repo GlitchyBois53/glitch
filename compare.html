@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/animations.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/cursor.js" defer></script>
+    <script src="js/compare.js" defer></script>
+    <script src="js/video.js" defer></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="black-box"></div>
+    <input type="checkbox" id="switch" checked />
+    <div
+      class="main-container container-scaler container-fp perspective pointer-events-none"
+      id="container"
+    >
+      <div class="synthwave"></div>
+      <div class="crt crt-fp"></div>
+      <div class="glass screen">
+        <div class="fisheye">
+          <div class="crt-container">
+            <div
+              class="content-wrapper no-align flex justify-center pointer-events-auto main-container-overflow"
+            >
+              <div class="max-w-[1000px] w-[90%] mx-auto leading-none">
+                <div class="fixed top-16 right-16 h-[206px] w-[150px] z-0 pointer-events-none">
+                    <div class="drip-compare">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div
+                  class="relative h-screen w-[100%] flex items-center justify-center flex-col z-10"
+                >
+                <div class="text-white glitch text-center pb-8 text-[36px] tracking-widest cursor-pointer" onclick="window.location.href = 'dashboard.html'">ADHD</div>
+                <div class="relative">
+                  <video
+                  class="max-w-[720px] mx-auto object-cover"
+                  src="video/intro.mp4" id="video"
+                  ></video>
+                  <div id="video-overlay" class="flex items-center justify-center inset-0 absolute invisible">
+                    <img class="w-24" id="video-play" src="assets/play.png" alt="">
+                    <img class="w-24 hidden" id="video-pause" src="assets/pause.png" alt="">
+                  </div>
+                </div>
+                  <h1
+                    class="heading-text text-[48px] self-start pt-16"
+                  >
+                    comparison.
+                  </h1>
+                </div>
+                <div class=" w-[100%] z-10 relative flex flex-col">
+                  <div class="max-w-[723px] mx-auto text-white text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cupiditate nulla nam maxime architecto exercitationem magnam debitis repellat minus molestiae nisi, optio minima quia doloremque nihil repudiandae nesciunt sit temporibus aliquid repellendus. Totam dolor aut ad eveniet </div>
+                  
+                    <div class="pt-[75px] mb-[75px] min-h-[500px] h-[100%] justify-center">
+                    
+                      <div class="flex flex-wrap gap-[28px] justify-center">
+                       
+                        <div class="hover-box-1 trans-bg max-w-[269px] w-[90%] h-[92px] border-[#F21BB9] pink-glow flex flex-col">
+                          <h2 class="menu-text py-[33.075px] text-[24px] text-center">impulsivitet</h2>
+                          <div class="list-item-1 collapse">
+                            <ul class="text-white text-[16px] flex flex-col gap-[15px] list-disc max-w-[200px] w-[90%] mx-auto pb-[33.075px]">
+                              <li>Svært ved at vente på tur eller udvise tålmodighed i en række situationer.</li>
+                              <li>Det kan være en udfordring at deltage i fritidsaktiviteter eller arbejdsopgaver stille og roligt.</li>
+                              <li>Det kan være problematisk at forblive på plads i situationer, hvor det forventes at sidde stille.</li>
+                              <li>Man kan have svært ved at styre impulser eller udvise selvkontrol.</li>
+                              <li>Svært ved at arbejde i strukturerede eller rutineprægede omgivelser.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="hover-box-2 trans-bg max-w-[269px] w-[90%] h-[92px] border-[#F21BB9] pink-glow flex flex-col">
+                          <h2 class="menu-text py-[20.475px] text-[24px] text-center">opmærksomheds forstyrelse</h2>
+                          <div class="list-item-2 collapse">
+                            <ul class="text-white text-[16px] flex flex-col gap-[15px] list-disc max-w-[200px] w-[90%] mx-auto pb-[33.075px]">
+                              <li>Det kan være svært at opretholde opmærksomheden på detaljer.</li>
+                              <li>Man begår måske fejl grundet manglen på opmærksomhed.</li>
+                              <li>Svært ved at opretholde opmærksomhed på opgaver eller fritidsaktiviteter.</li>
+                              <li>Det kan være en udfordring at lytte til og følge instruktioner.</li>
+                              <li>Man kan have svært ved at organisere eller planlægge opgaver og aktiviteter.</li>
+                            </ul>
+                          </div>
+                        </div>
+  
+                        <div class="hover-box-3 trans-bg max-w-[269px] w-[90%] h-[92px] border-[#F21BB9] pink-glow flex flex-col">
+                          <h2 class="menu-text py-[33.075px] text-[24px] text-center">impulsivitet</h2>
+                          <div class="list-item-3 collapse">
+                            <ul class="text-white text-[16px] flex flex-col gap-[15px] list-disc max-w-[200px] w-[90%] mx-auto pb-[33.075px]">
+                              <li>Man kan komme til at handle uden at tænke på konsekvenserne.</li>
+                              <li>Det kan være en udfordring at vente på tur eller tage hensyn til andres ønsker og behov.</li>
+                              <li>Risikotagning uden at tænke på sikkerhed eller konsekvenser.</li>
+                              <li>Man kan have ubehag ved at vente på belønning eller udsætte tilfredsstillelse.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
