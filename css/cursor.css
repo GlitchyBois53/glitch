@@ -16,7 +16,7 @@ body {
 .cursor {
     width: 30px;
     height: 30px;
-    border: 1px solid var(--red);
+    border: 2px solid var(--red);
     border-radius: 100%;
     transition: all 10ms ease-out;
     position: fixed;
@@ -25,14 +25,15 @@ body {
     top: 0;
     transform: translate(-100%, -100%);
     z-index: 10000;
+    box-shadow: 0 0 6px 2px var(--red), inset 0 0 6px 2px var(--red)
 }
 
 .hover {
     opacity: 0.5;
-    background-color: var(--blue);
+    background-color: var(--red);
 }
 
 .click {
-    opacity: 0.5;
+    opacity: 0.8;
     background-color: var(--red);
 }
